@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <button type="button" class="btn btn-default" (click)="back()">
+      <span class="glyphicon glyphicon-arrow-left"></span>
+    </button>
+    {{course.name}}
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4 center">
+        <img [src]="course.image" class="course-img" />
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-3"><b>Description</b></div>
+          <div class="col-md-9">{{course.description}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"><b>Author</b></div>
+          <div class="col-md-9">{{course.author}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"><b>Difficulty Level</b></div>
+          <div class="col-md-9">{{course.level}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"><b>Rating</b></div>
+          <div class="col-md-9">
+            <star [rating]='course.rating'></star>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"><b>Created On</b></div>
+          <div class="col-md-9">{{course.createdOn | datefilter}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
